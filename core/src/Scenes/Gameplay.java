@@ -15,7 +15,7 @@ import Entities.Player;
 
 
 public class Gameplay implements Screen {
-
+    private String hello = "Hello";
     private TiledMap map;
     private OrthogonalTiledMapRenderer renderer;
     private OrthographicCamera camera;

@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 
@@ -51,7 +52,8 @@ public class Gameplay implements Screen {
         map = loader.load("maps/themap.tmx");
         renderer = new OrthogonalTiledMapRenderer(map);
         camera = new OrthographicCamera();
-        player = new Player(new Sprite(new Texture("players/Swordsman.png")));
+        player = new Player(new Sprite(new Texture("players/Swordsman.png")),(TiledMapTileLayer)map.getLayers().get(0));
+        player.setPosition(15*player.getStaticLayer().getTileWidth(), 15 * player.getStaticLayer().getTileHeight());
     }
 
 

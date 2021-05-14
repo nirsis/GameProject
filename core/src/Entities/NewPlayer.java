@@ -29,6 +29,10 @@ public class NewPlayer implements InputProcessor {
     private float width;
     private float height;
     private boolean col;
+    private int hp;
+    private int attackDamage;
+    private int attackSpeed;
+    private int attackDistance;
 
 
 
@@ -80,13 +84,13 @@ public class NewPlayer implements InputProcessor {
         if(col == true) {
 
             if(movement.x < 0) {
-                sprite.setX(oldX+5);
+                sprite.setX(oldX+10);
             }else if(movement.x > 0) {
-                sprite.setX(oldX-5);
+                sprite.setX(oldX-10);
             }else if(movement.y < 0) {
-                sprite.setY(oldY+5);
+                sprite.setY(oldY+10);
             }else if(movement.y > 0) {
-                sprite.setY(oldY-5);
+                sprite.setY(oldY-10);
             }
 
             movement.x = 0;
@@ -154,6 +158,37 @@ public class NewPlayer implements InputProcessor {
     public Rectangle getBoundingRectangle() {
         Rectangle rect = sprite.getBoundingRectangle();
         return rect;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public void setAttackDamage(int attackDamage) {
+        this.attackDamage = attackDamage;
+    }
+
+    public void setAttackSpeed(int attackSpeed) {
+        this.attackSpeed = attackSpeed;
+    }
+
+    public void setAttackDistance(int attackDistance) {
+        this.attackDistance = attackDistance;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getAttackDamage() {
+        return attackDamage;
+    }
+
+    public int getAttackSpeed() {
+        return attackSpeed;
+    }
+
+    public int getAttackDistance() {
+        return attackDistance;
     }
 
     @Override

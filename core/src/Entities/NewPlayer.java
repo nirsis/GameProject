@@ -22,7 +22,6 @@ public class NewPlayer implements InputProcessor {
     private Vector2 movement = new Vector2();
     private float speed = 500;
     private Sprite sprite;
-    private Gameplay gp = new Gameplay();
     private TiledMap map;
     private float x;
     private float y;
@@ -33,6 +32,7 @@ public class NewPlayer implements InputProcessor {
     private int attackDamage;
     private int attackSpeed;
     private int attackDistance;
+
 
 
 

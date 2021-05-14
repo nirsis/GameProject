@@ -89,13 +89,12 @@ public class Gameplay implements Screen {
     public void show() {
 
         TmxMapLoader loader = new TmxMapLoader();
-        map = loader.load("maps/themap.tmx");
+        map = loader.load("Map/themap.tmx");
         renderer = new OrthogonalTiledMapRenderer(map);
         camera = new OrthographicCamera();
-        newPlayer = new NewPlayer(new Sprite(new Texture("players/Swordsman.png")),map);
+        newPlayer = new NewPlayer(new Sprite(new Texture("Players/Swordsman.png")),map);
         sr = new ShapeRenderer();
         camera = new OrthographicCamera();
-        newPlayer = new NewPlayer(new Sprite(new Texture("players/Swordsman.png")),map);
         Gdx.input.setInputProcessor(newPlayer);
         newPlayer.setPositionS(1500, 15);
     }

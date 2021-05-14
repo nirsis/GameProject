@@ -24,7 +24,6 @@ public class NewPlayer implements InputProcessor {
     private Sprite sprite;
     private Gameplay gp = new Gameplay();
     private TiledMap map;
-    // private Collision collision = new Collision(this, map);
     private float x;
     private float y;
     private float width;
@@ -58,7 +57,6 @@ public class NewPlayer implements InputProcessor {
 
         for (MapObject objects : map.getLayers().get("Objects").getObjects()) {
             if (objects instanceof RectangleMapObject) {
-
                 Rectangle rect = ((RectangleMapObject) objects).getRectangle();
                 if (Intersector.overlaps(rect, sprite.getBoundingRectangle())) {
                     toReturn = true;

@@ -44,8 +44,9 @@ public class NewPlayer implements InputProcessor {
     }
 
     public boolean outOfBounds() {
+
         boolean toReturn = false;
-        if((sprite.getX()) < 0 || (sprite.getX()) > 1920 || (sprite.getY()) < 0 || (sprite.getY()) > 1920) {
+        if((sprite.getX()) < 0 || (sprite.getX()) > 1890|| (sprite.getY()) < 0 || (sprite.getY()) > 1890) {
             toReturn = true;
 
         }
